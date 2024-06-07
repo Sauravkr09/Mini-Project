@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Record Form</title>
+    <style>
+        .error {
+            color: red;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .studentform {
+            border: 1px solid black;
+            height: 50vh;
+            width: 30%;
+            margin: auto;
+            border-radius: 1rem;
+            background-color: rgb(187, 213, 236);
+            margin-top: 2rem;
+        }
+
+        .formdetail {
+            padding: 2rem;
+            margin: auto;
+        }
+
+        label {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(152, 204, 249);">
+    <h1>Student Record Form</h1>
+    <hr>
+    <div class="studentform">
+        <div class="formdetail">
+
+            <form id="studentForm" onsubmit="return validateForm()">
+                <label for="fullName">Full Name:</label><br>
+                <input type="text" id="fullName" name="fullName"><br>
+                <span id="fullNameError" class="error"></span><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <span id="emailError" class="error"></span><br>
+
+                <label for="age">Age:</label><br>
+                <input type="number" id="age" name="age"><br>
+                <span id="ageError" class="error"></span><br>
+
+                <label for="grade">Grade:</label><br>
+                <input type="text" id="grade" name="grade"><br>
+                <span id="gradeError" class="error"></span><br>
+
+                <input type="submit" value="Submit">
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var fullName = document.getElementById("fullName").value;
+            var email = document.getElementById("email").value;
+            var age = document.getElementById("age").value;
+            var grade = document.getElementById("grade").value;
+
+            var fullNameError = document.getElementById("fullNameError");
+            var emailError = document.getElementById("emailError");
+            var ageError = document.getElementById("ageError");
+            var gradeError = document.getElementById("gradeError");
+
+            var isValid = true;
+
+            // Validate full name
+            var namePattern = /^[a-zA-Z]+$/;
+            if (!namePattern.test(fullName)) {
+                fullNameError.textContent = "Full name must contain only alphabet characters";
+                isValid = false;
+            } else {
+                fullNameError.textContent = "";
+            }
+            if (email === "") {
+                emailError.textContent = "Email is required";
+                isValid = false;
+            } else {
+                emailError.textContent = "";
+            }
+            // Validate age
+            if (age === "" || isNaN(age) || age < 0 || age > 110) {
+                ageError.textContent = "Age must be a number and valid";
+                isValid = false;
+            } else {
+                ageError.textContent = "";
+            }
+            // Validate grade
+            if (grade.length !== 1) {
+                gradeError.textContent = "Grade must contain exactly one character";
+                isValid = false;
+            } else {
+                gradeError.textContent = "";
+            }
+
+            if (isValid) {
+                alert("Successfully submitted");
+                document.getElementById("fullName").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("age").value = "";
+                document.getElementById("grade").value = "";
+            }
+            return isValid;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+.box {
+    height: 100px;
+    width: 300px;
+    background-color: pink;
+    /* animation-name: heightAnimate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+    animation: heightAnimate 2s ease-in 0s infinite normal;
+}
+
+/* @keyframes widthAnimate {
+    from {
+        width: 50px;
+    }
+
+    to {
+        width: 300px;
+    }
+}
+
+@keyframes sauravAnimation {
+    from {
+        font-size: 20px;
+    }
+
+    to {
+        font-size: 50px;
+    }
+}
+
+@keyframes colorAnimate {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: blue;
+    }
+} */
+
+@keyframes heightAnimate {
+    from {
+        height: 80px;
+        background-color: red;
+        font-size: 20px;
+        width: 50px;
+    }
+
+    to {
+        height: 500px;
+        background-color: blue;
+        font-size: 50px;
+        width: 300px;
+        border-radius: 15px;
+    }
+}

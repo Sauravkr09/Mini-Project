@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <tittle>Registration form</tittle>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>registration form </h2>
+    <form id="registractionForm" onsubmit="return validateForm()">
+        <div><label>Username:</label> <input id="username" type="text" name="username"> <span id="usernameError"
+                class="error"></span></div>
+        <div><label>password:</label> <input id="password" type="password" name="password"> <span id="passwordError"
+                class="error"></span></div>
+        <div><label>gmail:</label> <input id="gamil" type="text" name="gmail"> <span id="passwordError"
+                class="error"></span></div>
+        <div><label>conform password:</label> <input id="conformpassword" type="text" name="conform password"> <span
+                id="conformpasswordError" class="error"></span></div>
+        <button type="submit">Register</button>
+
+
+    </form>
+    <script>
+        function validateForm(){
+            var e=["username","email","password","conform password"];
+            var t={username:"username is required", password:"password is required" email: "email is required" conform password:"conform password is reqired"};
+            var n = true;
+        };
+    </script>
+</body>
+
+</html>

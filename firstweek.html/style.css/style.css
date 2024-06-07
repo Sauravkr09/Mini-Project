@@ -1,0 +1,64 @@
+/* h1 {
+    color: blue;
+    background-color: #ffffff;
+}
+
+p {
+    color: green;
+    background-color: yellow;
+}
+
+button {
+    color: pink;
+    background-color: green;
+} */
+/*  color  */
+/* h1 {
+    font-family: league spartan;
+    color: #ffa511;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1.5px;
+    text-decoration: teal double underline;
+    text-transform: uppercase;
+
+
+
+} */
+h1 {
+    color: pink;
+}
+
+#greet {
+    color: yellow;
+}
+
+.myclass {
+    color: brown;
+}
+
+div p {
+    background-color: black;
+}
+
+.para {
+    background-color: blue;
+}
+
+p {
+    background-color: green;
+}
+
+div.greetDiv.greet {
+    color: green;
+}
+
+.greetDiv p.greet {
+    color: blue;
+}
+
+.greetDiv .greet {
+    color: red;
+}
